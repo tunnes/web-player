@@ -1,9 +1,8 @@
 import React from 'react'
+import Home from '../home/component'
 
 export default () => (
   <div>
-    <h1>
-      Player is running well...
-    </h1>
+    <Home />
   </div>
 )

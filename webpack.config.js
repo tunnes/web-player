@@ -1,4 +1,8 @@
+/* eslint-disable */
+
 const webpack = require('webpack')
+
+const MiniCSSplugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
@@ -14,9 +18,16 @@ module.exports = {
     contentBase: "./public",
     port: 8080
   },
+  plugins: [
+    new MiniCSSplugin({ filename: 'bundle.css' })
+  ],
   module: {
     rules: [
-      { test: /.js[x]?$/, use: ['babel-loader'] }
-    ]
+      // To use BABEL presets in project.
+      { test: /.js[x]?$/, use: ['babel-loader'] },
+      
+      // To use SASS package in project.
+      { test: /\.s?[ac]ss$/, use: [ MiniCSSplugin.loader, 'css-loader', 'sass-loader' ] }
+    ],
   }
 }
