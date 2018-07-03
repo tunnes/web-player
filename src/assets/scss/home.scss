@@ -9,7 +9,8 @@ body {
 }
 
 .section-home {
-  width: 100%;
+  // width: 100%;
+  padding: 0% 10%;
   height: 100vh;
   position: relative;
 
@@ -21,14 +22,15 @@ body {
     width: 100%;
     height: 100%; 
     position: absolute;
+    background-size: cover;
     background-image: url('https://source.unsplash.com/1600x900/?song,music,band,show');
     filter: grayscale(100%) brightness(45%) sepia(100%) hue-rotate(140deg) saturate(1000%) contrast(0.9);
   }
 
   .wrapper-banner {
     position: absolute;
-    bottom: 150px;
-    left: 50px;
+    bottom: 151px;
+    left: 11%;
     .banner {
       &-header {
         font-size: 66px;
@@ -43,14 +45,13 @@ body {
         text-transform: uppercase;
       }
       &-footer {
-        width: 400px;
+        width: 550px;
         background: white;
         padding: 10px;
         text-align: left;
-        font-size: 12px;
+        font-size: 13px;
         font-family: 'Fira Mono', monospace;
         text-transform: uppercase;
-        // border: 1px solid black;
         position: relative;
         &:before {
           content: '';
