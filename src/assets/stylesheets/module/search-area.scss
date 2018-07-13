@@ -1,11 +1,8 @@
 .search-area {
-  height: 100vh;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  height: 61px;
   .search-input-wrapper {
     position: relative;
+    display: block;
     input {
       border: 1px solid;
       font-size: 16px;
@@ -14,6 +11,7 @@
       padding: 15px 50px;
       width: 400px;
     }
+
     &:before {
       content: '';
       width: 100%;

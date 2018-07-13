@@ -4,11 +4,16 @@
     "import/no-extraneous-dependencies": [
       "error", { "devDependencies": true }
     ],
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "no-underscore-dangle": "off",
+    "react/prefer-stateless-function": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off"
   },
   "globals": {
     "document": false,
     "expect": false,
+    "window": false,
     "test": false
   }
   

@@ -1,12 +1,20 @@
 import React from 'react'
-import Home from '../home/home'
+
+// Components
 import Navbar from '../nav/navbar'
 import SearchArea from '../search-area/search-area'
+import SearchResults from '../search-results/search-results'
+
+// Styles Base
+import '../assets/stylesheets/base/reset.scss'
+import '../assets/stylesheets/base/typography.scss'
+// Styles Layout
+import '../assets/stylesheets/layout/app.scss'
 
 export default () => (
-  <div>
+  <div className="react-component-wrapper">
     <Navbar />
-    <Home />
     <SearchArea />
+    <SearchResults />
   </div>
 )
