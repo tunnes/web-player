@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React from 'react'
-import '../assets/stylesheets/navbar.scss'
+import '../assets/stylesheets/layout/navbar.scss'
 
 export default props => (
   <nav className='navigation-bar'>

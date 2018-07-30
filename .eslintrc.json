@@ -1,10 +1,9 @@
 {
   "extends": "airbnb",
   "rules":{
-    "import/no-extraneous-dependencies": [
-      "error", { "devDependencies": true }
-    ],
+    "import/no-extraneous-dependencies": [ "error", { "devDependencies": true } ],
     "semi": ["error", "never"],
+    "class-methods-use-this": "off",
     "no-underscore-dangle": "off",
     "react/prefer-stateless-function": "off",
     "react/destructuring-assignment": "off",
@@ -14,7 +13,8 @@
     "document": false,
     "expect": false,
     "window": false,
-    "test": false
+    "test": false,
+    "Audio": false
   }
   
 }

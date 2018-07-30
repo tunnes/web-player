@@ -7,13 +7,12 @@ import { bindActionCreators } from 'redux'
 import { handleSearch, changeQuery } from './search-actions'
 
 // Styles
-import '../assets/stylesheets/module/search-area.scss'
+import '../assets/stylesheets/module/search-input.scss'
 
-class SearchArea extends React.Component {
+class SearchInput extends React.Component {
   constructor(props) {
     super(props)
     this.handleKey = this.handleKey.bind(this)
-    this.instance = null
   }
 
   handleKey(event) {
@@ -22,17 +21,23 @@ class SearchArea extends React.Component {
 
   render() {
     return (
-      <div className="search-area">
-        <label htmlFor="search-input" className="search-input-wrapper">
+      <div className="search-input">
+        <label htmlFor="search-input" className="search-input__label">
           <input
             type="text"
-            className="search-input"
-            placeholder="Search by track or mixer nickname..."
+            placeholder="By track or mixer nickname..."
             value={this.props.query}
             onChange={this.props.changeQuery}
             onKeyUp={this.handleKey}
           />
         </label>
+        <button
+          type="button"
+          className="search-input__button"
+          onClick={() => this.props.handleSearch(this.props.query)}
+        >
+          Search
+        </button>
       </div>
     )
   }
@@ -46,4 +51,4 @@ const mapStateToProps = state => (
   { query: state.search.query, tracks: state.search.tracks }
 )
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchArea)
+export default connect(mapStateToProps, mapDispatchToProps)(SearchInput)
