@@ -1,0 +1,13 @@
+{
+  "container": "#waveform",
+  "waveColor": "rgba(255, 255, 255, 0.6)",
+  "progressColor": "red",
+  "backend": "MediaElement",
+  "cursorWidth": 0,
+  "forceDecode": true,
+  "responsive": true,
+  "hideScrollbar": true,
+  "barGap": 1,
+  "barWidth": 4,
+  "height": 300
+}

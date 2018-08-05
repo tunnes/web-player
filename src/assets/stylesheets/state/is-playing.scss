@@ -1,0 +1,17 @@
+.is-playing {
+  display: flex;
+
+  .search-section {
+    display: none;
+    width: 30%;
+
+    .search-results {
+      width: auto;
+    }
+  }
+
+  .audio-wave {
+    display: flex;
+  }
+  
+}

@@ -1,0 +1,16 @@
+#app {
+  min-height: 100vh;
+
+  &:before {
+    content: '';
+    top: 0;
+    left: 0;  
+    z-index: -1; 
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    background-size: cover;
+    background-image: url('https://source.unsplash.com/1600x900/?song,music,band,show');
+    filter: grayscale(100%) brightness(45%) sepia(100%) hue-rotate(140deg) saturate(1000%) contrast(0.9);
+  }
+}

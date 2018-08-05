@@ -27,7 +27,10 @@ module.exports = {
       { test: /.js[x]?$/, use: ['babel-loader'] },
       
       // To use SASS package in project.
-      { test: /\.s?[ac]ss$/, use: [ MiniCSSplugin.loader, 'css-loader', 'sass-loader' ] }
+      { test: /\.s?[ac]ss$/, use: [ MiniCSSplugin.loader, 'css-loader', 'sass-loader' ] },
+
+      // To use SVG in project.
+      { test: /\.svg$/, use: ['react-svg-loader'] }
     ],
   }
 }

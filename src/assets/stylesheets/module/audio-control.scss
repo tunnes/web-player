@@ -1,0 +1,26 @@
+.audio-control {
+  width: 30%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &__titles {
+    margin-top: 150px;
+
+    h2, h4 {
+      margin: 0px;
+      margin-left: 50px;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+  }
+}

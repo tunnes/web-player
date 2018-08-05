@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 // Components
 import SearchSection from '../search-section/search-section'
+import AudioWave from '../audio-wave/audio-wave'
+import AudioControl from '../audio-control/audio-control'
 
 // Styles Base
 import '../assets/stylesheets/base/reset.scss'
@@ -12,29 +14,27 @@ import '../assets/stylesheets/base/typography.scss'
 // Styles Layout
 import '../assets/stylesheets/layout/app.scss'
 
+// Styles Modifier
+import '../assets/stylesheets/state/is-playing.scss'
+
 class WebPlayer extends Component {
   constructor(props) {
     super(props)
-    this.audio = new Audio()
-    this.audioPromise = null
-    this.updateCurrentAudio = this.updateCurrentAudio.bind(this)
+    this.getClassModifiers = this.getClassModifiers.bind(this)
   }
 
-  updateCurrentAudio() {
-    const { currentTrack } = this.props
-    if (currentTrack.playing && currentTrack.data !== null) {
-      this.audio.src = currentTrack.data.download_url
-      this.audioPromise = this.audio.play()
-    } else if (!currentTrack.playing && currentTrack.data !== null) {
-      this.audioPromise.then(() => this.audio.pause())
-    }
+  getClassModifiers() {
+    let className = ''
+    if (this.props.currentTrack.playing) { className = `${className} is-playing` }
+    return className
   }
 
   render() {
-    // this.updateCurrentAudio()
     return (
-      <div className="react-component-wrapper">
+      <div className={`react-component-wrapper ${this.getClassModifiers()}`}>
         <SearchSection />
+        <AudioControl />
+        <AudioWave />
       </div>
     )
   }
